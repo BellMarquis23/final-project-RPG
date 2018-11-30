@@ -13,12 +13,10 @@ class Player(pg.sprite.Sprite):
         self.image = game.player_img
         self.rect = self.image.get_rect()
         self.vel = vec(0, 0)
-        self.vel = vec(0, 0)
         self.pos = vec(x, y) * TILESIZE
 
-
     def get_keys(self):
-        self.vel = vec(0, 0) 
+        self.vel = vec(0, 0)
         keys = pg.key.get_pressed()
         if keys[pg.K_LEFT] or keys[pg.K_a]:
             self.vel.x = -PLAYER_SPEED
