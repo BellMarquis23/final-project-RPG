@@ -1,9 +1,19 @@
 #this file was created by Marcus Ponce
 #thank you Chris Bradfield with Kids Can Code basic outline
-
 import pygame as pg
 from settings import *
 vec = pg.math.Vector2 
+
+#spritesheet class from Mr. Cozort; from Chris Bradfield 
+class Spritesheet:
+    # class for loading and parsing sprite sheets
+    def __init__(self, filename):
+        self.spritesheet = pg.image.load(filename).convert()
+    def get_image(self, x, y, width, height):
+        image = pg.Surface((width, height))
+        image.blit(self.spritesheet, (0,0), (x, y, width, height))
+        image = pg.transform.scale(image, (width // 2, height // 2))
+        return image
 
 class Player(pg.sprite.Sprite):
     def __init__(self, game, x, y):

@@ -22,11 +22,13 @@ class Game:
         game_folder = path.dirname(__file__)
         img_folder = path.join(game_folder, 'img')
         self.map = Map(path.join(game_folder, 'map3.txt'))
+        #loads player sprite on screen
         self.player_img = pg.image.load(path.join(img_folder, PLAYER_IMG)).convert_alpha()
 
     def new(self):
         # initialize all variables and do all the setup for a new game
         self.all_sprites = pg.sprite.Group()
+        #reads a text file and creates walls by looking for a specific variable
         self.walls = pg.sprite.Group()
         for row, tiles in enumerate(self.map.data):
             for col, tile in enumerate(tiles):
@@ -55,6 +57,7 @@ class Game:
         self.camera.update(self.player)
 
     def draw_grid(self):
+        #draws grid on background of game
         for x in range(0, WIDTH, TILESIZE):
             pg.draw.line(self.screen, LIGHTGREY, (x, 0), (x, HEIGHT))
         for y in range(0, HEIGHT, TILESIZE):
