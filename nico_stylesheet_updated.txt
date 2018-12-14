@@ -1,0 +1,65 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-nico_stand {
+    width: 68px;
+    height: 68px;
+    background-position: -5px -5px;
+}
+
+.sprite-nico_stand_back {
+    width: 68px;
+    height: 68px;
+    background-position: -83px -5px;
+}
+
+.sprite-nico_stand_left {
+    width: 68px;
+    height: 68px;
+    background-position: -161px -5px;
+}
+
+.sprite-nico_stand_right {
+    width: 68px;
+    height: 68px;
+    background-position: -5px -83px;
+}
+
+.sprite-nico_walk_back_left {
+    width: 68px;
+    height: 68px;
+    background-position: -83px -83px;
+}
+
+.sprite-nico_walk_back_right {
+    width: 68px;
+    height: 68px;
+    background-position: -161px -83px;
+}
+
+.sprite-nico_walk_forward_left {
+    width: 68px;
+    height: 68px;
+    background-position: -5px -161px;
+}
+
+.sprite-nico_walk_forward_right {
+    width: 68px;
+    height: 68px;
+    background-position: -83px -161px;
+}
+
+.sprite-nico_walk_left {
+    width: 68px;
+    height: 68px;
+    background-position: -161px -161px;
+}
+
+.sprite-nico_walk_right {
+    width: 68px;
+    height: 68px;
+    background-position: -239px -5px;
+}

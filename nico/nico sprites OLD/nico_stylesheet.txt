@@ -1,0 +1,47 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-nico_stand {
+    width: 64px;
+    height: 64px;
+    background-position: -5px -5px;
+}
+
+.sprite-nico_stand_backwards {
+    width: 64px;
+    height: 68px;
+    background-position: -79px -5px;
+}
+
+.sprite-nico_stand_left {
+    width: 64px;
+    height: 64px;
+    background-position: -5px -83px;
+}
+
+.sprite-nico_walk_backward {
+    width: 64px;
+    height: 64px;
+    background-position: -79px -83px;
+}
+
+.sprite-nico_walk_forward {
+    width: 64px;
+    height: 64px;
+    background-position: -153px -5px;
+}
+
+.sprite-nico_walk_left {
+    width: 64px;
+    height: 64px;
+    background-position: -153px -79px;
+}
+
+.sprite-nico_walk_right {
+    width: 64px;
+    height: 64px;
+    background-position: -153px -153px;
+}
