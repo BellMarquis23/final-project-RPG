@@ -10,6 +10,10 @@ from settings import *
 from sprites import *
 from tilemap import *
 
+# "the tilemap or rpg style game created uses several different files of code to work"
+# "under the guide of Kids Can Code's format, I was able to string together the main, sprites, settings, and tilemap"
+# "python files."
+
 class Game:
     def __init__(self):
         pg.init()
@@ -17,7 +21,9 @@ class Game:
         pg.display.set_caption(TITLE)
         self.clock = pg.time.Clock()
         self.load_data()
-
+#load data chunk of code reads and initializes the game"
+#reads files from other folders which can have assets or files put inside them"
+#self.map allows the coder to pick what map for the game to read and play through; map loader & selector"        
     def load_data(self):
         game_folder = path.dirname(__file__)
         #img_folder = path.join(game_folder, 'img')
@@ -28,7 +34,10 @@ class Game:
         #self.player_img = pg.image.load(path.join(img_folder, PLAYER_IMG)).convert_alpha()
         #loads spritesheet into game
         self.spritesheet = Spritesheet(path.join(img_dir, SPRITESHEET))
-
+        self.wall_img = pg.image.load(path.join(img_dir, WALL_IMG)).convert_alpha()
+        self.wall_img = pg.transform.scale(self.wall_img, (TILESIZE, TILESIZE))
+#new self chunk reads the map text file, which is 32 by 32, for certain digits assigned by the coder"
+#this allows for easy map set up via a text file instead of writing a coded python file"
     def new(self):
         # initialize all variables and do all the setup for a new game
         self.all_sprites = pg.sprite.Group()
@@ -68,8 +77,10 @@ class Game:
             pg.draw.line(self.screen, LIGHTGREY, (0, y), (WIDTH, y))
 
     def draw(self):
+        #command shows FPS on top of the window bar
+        pg.display.set_caption("{:.2f}".format(self.clock.get_fps()))
         self.screen.fill(BGCOLOR)
-        self.draw_grid()
+        #self.draw_grid()
         for sprite in self.all_sprites:
             self.screen.blit(sprite.image, self.camera.apply(sprite))
         pg.display.flip()

@@ -6,6 +6,10 @@ from settings import *
 
 # def collide_hit_rect(one, two):
 #     return one.hit_rect.colliderect(two.rect)
+# "this tilemap file is an add-on to the 3 set up files for the game"
+# "what this does is act as the camera for following the player around the map"
+# "first the class for 'map' is created, allowing us to use the camera class,
+# "which reads the map class"
 
 class Map:
     def __init__(self, filename):
